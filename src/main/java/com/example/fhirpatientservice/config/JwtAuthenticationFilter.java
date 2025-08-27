@@ -25,9 +25,11 @@ import java.util.List;
 
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-    private final String secret = "mySuperSecretKey123mySuperSecretKey123"; // 32+ karakter a HS256-hoz
+    private final Key key;
 
-    private final Key key = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8)); // ÚJ: SecretKey típus
+    public JwtAuthenticationFilter(JwtProperties jwtProperties) {
+        this.key = Keys.hmacShaKeyFor(jwtProperties.getSecret().getBytes(StandardCharsets.UTF_8));
+    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,

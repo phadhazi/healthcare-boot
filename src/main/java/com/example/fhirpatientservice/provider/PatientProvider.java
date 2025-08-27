@@ -51,6 +51,11 @@ public class PatientProvider implements IResourceProvider {
     public List<Patient> searchPatientsByFamilyName(@OptionalParam(name = "family") StringParam familyName) {
         try {
             String family = familyName != null ? familyName.getValue() : "";
+
+            if (family.length() < 4) {
+                throw new RuntimeException("family must be at least 4 characters long");
+            }
+
             return patientService.searchPatientsByFamilyName(family).stream()
                     .map(Transformer::toFhirPatient)
                     .collect(Collectors.toList());

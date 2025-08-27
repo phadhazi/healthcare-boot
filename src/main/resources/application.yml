@@ -1,0 +1,2 @@
+jwt:
+  secret: mySuperSecretKey123mySuperSecretKey123
