@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "4e1b1b00-ee9d-4322-89bb-78e6d7abcb02",
-		"name": "Organization_API",
+		"_postman_id": "9b19578b-6bcd-4b9d-86ba-abb94aa91f97",
+		"name": "Organization_API Test server",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "11041999"
 	},
@@ -73,12 +73,15 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/fhir/r4/Organization/:id",
+							"raw": "http://91.229.23.226:30080/fhir/r4/Organization/:id",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"91",
+								"229",
+								"23",
+								"226"
 							],
-							"port": "8080",
+							"port": "30080",
 							"path": [
 								"fhir",
 								"r4",
@@ -117,12 +120,15 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/fhir/r4/Organization/:id",
+							"raw": "http://91.229.23.226:30080/fhir/r4/Organization/:id",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"91",
+								"229",
+								"23",
+								"226"
 							],
-							"port": "8080",
+							"port": "30080",
 							"path": [
 								"fhir",
 								"r4",
@@ -139,7 +145,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1"
+									"value": "11"
 								}
 							]
 						}
@@ -161,12 +167,15 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/fhir/r4/Organization/:id",
+							"raw": "http://91.229.23.226:30080/fhir/r4/Organization/:id",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"91",
+								"229",
+								"23",
+								"226"
 							],
-							"port": "8080",
+							"port": "30080",
 							"path": [
 								"fhir",
 								"r4",
@@ -183,7 +192,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1"
+									"value": "aaa"
 								}
 							]
 						}
@@ -203,6 +212,16 @@
 				}
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt_read}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [
 					{
@@ -212,12 +231,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/fhir/r4/Organization",
+					"raw": "http://91.229.23.226:30080/fhir/r4/Organization",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"91",
+						"229",
+						"23",
+						"226"
 					],
-					"port": "8080",
+					"port": "30080",
 					"path": [
 						"fhir",
 						"r4",
@@ -238,12 +260,15 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/fhir/r4/Organization",
+							"raw": "http://91.229.23.226:30080/fhir/r4/Organization",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"91",
+								"229",
+								"23",
+								"226"
 							],
-							"port": "8080",
+							"port": "30080",
 							"path": [
 								"fhir",
 								"r4",

@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "180644f9-08d0-42c3-83ca-b2f68cff5ebb",
+		"_postman_id": "2a81df11-3be6-4d3e-898f-b753c201af15",
 		"name": "Patient_API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "11250916"
+		"_exporter_id": "11041999"
 	},
 	"item": [
 		{
@@ -100,10 +100,10 @@
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				},
 				{
 					"name": "GET Patient no found 404",
@@ -139,15 +139,15 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "2"
+									"value": "23"
 								}
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				},
 				{
 					"name": "GET Patient - wrong input 500",
@@ -183,15 +183,15 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "2"
+									"value": "aaa"
 								}
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				}
 			]
 		},
@@ -283,10 +283,10 @@
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				},
 				{
 					"name": "Search Patient - Not found - 200",
@@ -324,10 +324,10 @@
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				}
 			]
 		},
@@ -339,6 +339,16 @@
 				}
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt_write}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -419,10 +429,10 @@
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				},
 				{
 					"name": "Create Patient - Internal error - 500",
@@ -465,10 +475,10 @@
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				}
 			]
 		}
@@ -498,11 +508,11 @@
 	"variable": [
 		{
 			"key": "jwt_write",
-			"value": ""
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInJvbGUiOiJXUklURSIsImV4cCI6OTk5OTk5OTk5OX0.laNvC5NyccKLdbUVx8Sv2H7FIarb73d_C142IVWMaxo"
 		},
 		{
 			"key": "jwt_read",
-			"value": ""
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInJvbGUiOiJSRUFEIiwiZXhwIjo5OTk5OTk5OTk5fQ.WGefMCq-Tr5KnSN2FWdgAg9Jsjc1SbfYlgzRjHZ3aTA"
 		}
 	]
 }

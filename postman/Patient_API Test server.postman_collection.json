@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "caea0586-229b-4948-a754-36c10c523145",
+		"_postman_id": "62f28b9a-d1e2-4505-b0af-46953a9151e3",
 		"name": "Patient_API Test server",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "11250916"
+		"_exporter_id": "11041999"
 	},
 	"item": [
 		{
@@ -33,12 +33,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/fhir/r4/Patient/:id",
+					"raw": "http://91.229.23.226:30080/fhir/r4/Patient/:id",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"91",
+						"229",
+						"23",
+						"226"
 					],
-					"port": "8080",
+					"port": "30080",
 					"path": [
 						"fhir",
 						"r4",
@@ -100,10 +103,10 @@
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				},
 				{
 					"name": "GET Patient no found 404",
@@ -117,12 +120,15 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/fhir/r4/Patient/:id",
+							"raw": "http://91.229.23.226:30080/fhir/r4/Patient/:id",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"91",
+								"229",
+								"23",
+								"226"
 							],
-							"port": "8080",
+							"port": "30080",
 							"path": [
 								"fhir",
 								"r4",
@@ -139,15 +145,15 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "2"
+									"value": "23"
 								}
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				},
 				{
 					"name": "GET Patient - wrong input 500",
@@ -161,12 +167,15 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/fhir/r4/Patient/:id",
+							"raw": "http://91.229.23.226:30080/fhir/r4/Patient/:id",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"91",
+								"229",
+								"23",
+								"226"
 							],
-							"port": "8080",
+							"port": "30080",
 							"path": [
 								"fhir",
 								"r4",
@@ -183,15 +192,15 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "2"
+									"value": "aa"
 								}
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				}
 			]
 		},
@@ -222,12 +231,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/fhir/r4/Patient?family=Smith",
+					"raw": "http://91.229.23.226:30080/fhir/r4/Patient?family=Smith",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"91",
+						"229",
+						"23",
+						"226"
 					],
-					"port": "8080",
+					"port": "30080",
 					"path": [
 						"fhir",
 						"r4",
@@ -259,12 +271,15 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/fhir/r4/Patient?family=Smith",
+							"raw": "http://91.229.23.226:30080/fhir/r4/Patient?family=Smith",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"91",
+								"229",
+								"23",
+								"226"
 							],
-							"port": "8080",
+							"port": "30080",
 							"path": [
 								"fhir",
 								"r4",
@@ -283,10 +298,10 @@
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				},
 				{
 					"name": "Search Patient - Not found - 200",
@@ -300,12 +315,15 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/fhir/r4/Patient?family=Smith",
+							"raw": "http://91.229.23.226:30080/fhir/r4/Patient?family=aaa",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"91",
+								"229",
+								"23",
+								"226"
 							],
-							"port": "8080",
+							"port": "30080",
 							"path": [
 								"fhir",
 								"r4",
@@ -319,15 +337,15 @@
 								},
 								{
 									"key": "family",
-									"value": "Smith"
+									"value": "aaa"
 								}
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				}
 			]
 		},
@@ -339,6 +357,16 @@
 				}
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt_write}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -422,10 +450,10 @@
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				},
 				{
 					"name": "Create Patient - Internal error - 500",
@@ -440,7 +468,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"resourceType\": \"Patient\",\r\n  \"name\": [\r\n    {\r\n      \"family\": \"Smith\",\r\n      \"given\": [\"John\"]\r\n    }\r\n  ],\r\n  \"gender\": \"male\",\r\n  \"birthDate\": \"1980-01-01\"\r\n}\r\n",
+							"raw": "{\r\n  \"resourceType\": \"Patient\",\r\n  \"name\": [\r\n    {\r\n      \"family\": \"Smith\",\r\n      \"given\": [\"John\"]\r\n    }\r\n  ],\r\n  \"gender\": \"male\",\r\n  \"birthDate\": \"aa\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -448,12 +476,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/fhir/r4/Patient",
+							"raw": "http://91.229.23.226:30080/fhir/r4/Patient",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"91",
+								"229",
+								"23",
+								"226"
 							],
-							"port": "8080",
+							"port": "30080",
 							"path": [
 								"fhir",
 								"r4",
@@ -468,10 +499,10 @@
 							]
 						}
 					},
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
-					"body": null
+					"body": ""
 				}
 			]
 		}
@@ -501,11 +532,11 @@
 	"variable": [
 		{
 			"key": "jwt_write",
-			"value": ""
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInJvbGUiOiJXUklURSIsImV4cCI6OTk5OTk5OTk5OX0.laNvC5NyccKLdbUVx8Sv2H7FIarb73d_C142IVWMaxo"
 		},
 		{
 			"key": "jwt_read",
-			"value": ""
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInJvbGUiOiJSRUFEIiwiZXhwIjo5OTk5OTk5OTk5fQ.WGefMCq-Tr5KnSN2FWdgAg9Jsjc1SbfYlgzRjHZ3aTA"
 		}
 	]
 }
