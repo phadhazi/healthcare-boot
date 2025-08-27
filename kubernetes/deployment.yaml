@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: healthcare-boot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: healthcare-boot
+  template:
+    metadata:
+      labels:
+        app: healthcare-boot
+    spec:
+      containers:
+        - name: healthcare-boot
+          image: phadhazi/healthcare-boot:latest
+          ports:
+            - containerPort: 8080
