@@ -79,8 +79,8 @@ JWT-based authentication is used with two roles:
 
 | Role | Description | Example JWT Token |
 |------|-------------|-------------------|
-| **READ** | Can read/search data | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` |
-| **WRITE** | Can create data | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` |
+| **READ** | Can read/search data | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInJvbGUiOiJSRUFEIiwiZXhwIjo5OTk5OTk5OTk5fQ.WGefMCq-Tr5KnSN2FWdgAg9Jsjc1SbfYlgzRjHZ3aTA` |
+| **WRITE** | Can create data | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInJvbGUiOiJXUklURSIsImV4cCI6OTk5OTk5OTk5OX0.laNvC5NyccKLdbUVx8Sv2H7FIarb73d_C142IVWMaxo` |
 
 Use these tokens in Postman or other tools:
 
